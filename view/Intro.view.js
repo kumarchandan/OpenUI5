@@ -3,27 +3,19 @@
 
 	sap.ui.jsview("view.Intro", {
 
-		/** Specifies the Controller belonging to this View. 
-		 * In the case that it is not implemented, or that "null" is returned, this View does not have a Controller.
-		 * @memberOf fioricollaboration.ShellView
-		 */
 		getControllerName: function() {
 			return "view.Intro";
 		},
 
-		//#######################################################################################################################################################
-		// VIEW LAYOUT FUNCTIONS
-		//#######################################################################################################################################################
-
-		/** Is initially called once after the Controller has been instantiated. It is the place where the UI is constructed. 
-		 * Since the Controller is given to this method, its event handlers can be attached right away.
-		 * @memberOf fioricollaboration.ShellView
-		 */
-		/*jshint unused: vars */
 		createContent: function(oController) {
 			return new sap.m.Page({
-				title: "Master",
-				content: []
+				title: "Welcome",
+				content: [
+					new sap.ui.commons.TextView({
+						text: "Welcome you, Please select a product from the Master Page(left) to see the description",
+						design: sap.ui.commons.TextViewDesign.H5
+					})
+				]
 			});
 		}
 	});

@@ -21,7 +21,12 @@
 			id: "introId",
 			viewName: "view.Intro",
 			type: sap.ui.core.mvc.ViewType.JS
+		});
 
+		var oDetailsPage = new sap.ui.view({
+			id: "detailsId",
+			viewName: "view.Details",
+			type: sap.ui.core.mvc.ViewType.JS
 		});
 
 		var oMasterPage = new sap.ui.view({
@@ -30,13 +35,14 @@
 			type: sap.ui.core.mvc.ViewType.JS
 		});
 
-		oSplitApp.addDetailPage(oIntroPage);
+		oSplitApp.addDetailPage(oIntroPage).addDetailPage(oDetailsPage);
 		oSplitApp.addMasterPage(oMasterPage);
 
 		oSplitApp.setInitialDetail("introId");
 		oSplitApp.setInitialMaster("masterId");
 
 		oSplitApp.placeAt("content");
+		oSplitApp.setMode("ShowHideMode");
 	</script>
 </head>
 
